@@ -1,0 +1,89 @@
+<html>
+<head>
+<title>
+Sign up
+</title>
+<style>
+fieldset{
+  border-color:aqua;
+  margin-left: 150px;
+  margin-right: 150px;
+}
+h1{
+  color: red;
+  font-family:Comic Sans Ms;
+  text-align:center;
+  font-size:50px;
+  height:50px;
+}
+label{
+  font-weight: bold;
+}
+  form{
+    height: 50%
+     
+  }
+  h1:hover {
+ color:brown;
+}
+div{
+  margin-top: 100px;
+}
+body{
+  background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('image/header7.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  color:#fff;
+  
+}
+input[type="button"]{
+  background-color: orange;
+}
+input[type="reset"]{
+  background-color: yellow;
+}
+
+  </style>
+
+
+</head>
+<body>
+<h1>
+ Sign up
+</h1>
+<fieldset>
+<form align="center">
+  <div>
+<label>Username-:</label>
+<input type="text" name="userid" placeholder="abc123" /><br><br>
+<label>Password-:</label>
+<input type="password" name="pswrd" placeholder="******" /><br><br>
+<input type="button" onclick="check(this.form)" value="Login"/>
+<input type="reset" value="Cancel"/>
+</div>
+</form>
+</fieldset>
+<script language="javascript">
+function check(form){
+ if(form.userid.value == "Mehak1209" && form.pswrd.value == "Mehak1209")
+  {
+    window.open('sa.html')
+  }
+  else if(form.userid.value == "Rahul1171" && form.pswrd.value == "Rahul1171")
+  {
+    window.open('sa2.html')
+  }
+  else if(form.userid.value == "Sarthak1198" && form.pswrd.value == "Sarthak1198")
+  {
+    window.open('sa3.html')
+  }
+ 
+ else
+ {
+   alert("Error Password or Username")/*displays error message*/
+  }
+}
+</script>
+</body>
+</html>

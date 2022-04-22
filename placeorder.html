@@ -1,0 +1,111 @@
+<html>
+<head>
+	<title>Pizza Order</title>
+	<style>
+		
+
+
+
+body{
+	background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('https://media.gettyimages.com/photos/cut-into-slices-delicious-fresh-pizza-with-sausage-pepperoni-and-on-picture-id1083487954?b=1&k=6&m=1083487954&s=612x612&w=0&h=CgNEjaMxyJ-weMIhoqNA3QbxNUGZ60rmY7GowVpfijM=');
+    background-attachment: fixed;
+background-repeat: no-repeat;
+	background-size: cover;
+	height: 100vh;
+	color:#fff;
+}
+
+
+
+
+table{
+	margin-left: 20px;
+}
+th,td{
+	width:50%;
+}
+
+.d1{
+text-align: left;
+}
+
+input,textarea{
+font-size: 20px;
+}
+
+input[type="submit"]{
+	color:#fff;
+	background-color: red;
+	border-color: black;
+	border-radius: 20px;
+	margin-left: 60px;
+}
+input[type="submit"]:hover{
+	background-color:lightblue;
+     color:white;
+
+}
+
+	</style>
+</head>
+<body>
+	
+
+<table>
+<tr>
+	<th></th>
+	<th style=" opacity: 0.5;background-color:white;color: black;border-radius: 20px;">TO ORDER:</th>
+</tr>
+
+	<td>
+		<div align="center" class="d1">
+		<form name="Myform" onsubmit="return validation()" method="post" action="#">
+			<div>
+			<label>Enter your name: </label><br><br>
+			<input type="text" placeholder="abc" size="15" name="name"></div><br>
+			<div>
+			<label>Mobile Number: </label><br><br>
+			<input type="number" size="10" placeholder="xxxxxxxxxx" name="Mobile"></div><br>
+			<div>
+			<label>Address: </label><br><br>
+			<textarea rows="5" cols="30" placeholder="Address...." name="Address"></textarea></div><br>
+			<div>
+				<label>Enter Your Order:</label><br><br>
+				<input type="text" placeholder="Paneer Pizza" name="dish">
+			</div>
+			<div>
+				<label>Quantity:</label><br><br>
+				<input type="number" name="item" min="0" max="10">
+			</div><br>
+			<input type="submit" value="Place Order">
+		</form>
+	</div>
+	</td>
+</tr>
+<!--javascript-->
+<script>
+	function validation() {
+  var x = document.forms["Myform"]["name"].value;
+  var y = document.forms["Myform"]["Mobile"].value;
+  var z = document.forms["Myform"]["Address"].value;
+   var a = document.forms["Myform"]["dish"].value;
+    var b = document.forms["Myform"]["item"].value;
+  if(x=="" && y=="" && z=="" && a=="" && b=="")
+  {
+    alert("please fill all detail!!!");
+    return false;
+  }
+   else if(x=="" || y=="" || z=="" || a=="" || b=="")
+  {
+    alert("Something is missing please check first !!!");
+    return false;
+  }
+  else
+  {
+  	window.open("thanku.html");
+  }
+
+}
+</script>
+	</table>
+</body>
